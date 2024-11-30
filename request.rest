@@ -1,0 +1,36 @@
+get http://localhost:5000/account/users
+
+###
+post http://localhost:5000/account/register
+Content-Type: application/json
+
+{
+    "name": "Ifeayi Test", 
+    "username": "Ifeayi", 
+    "password": "12345"
+}
+
+###
+# Working with Task
+GET http://localhost:5000/task/all
+###
+GET http://localhost:5000/task/67413bd4919b49399cab8b99
+###
+DELETE  http://localhost:5000/task/67413bd4919b49399cab8b99
+###
+PATCH  http://localhost:5000/task/67413bd4919b49399cab8b99
+Content-Type: application/json
+
+{
+    "title": "Goto the market"
+}
+###
+POST http://localhost:5000/task/add
+Content-Type: application/json
+
+{
+    "title": "Play Football",
+    "description" : "Go get the ball",
+    "deadline" : "2024-11-25",
+    "priority" :"low"
+}
